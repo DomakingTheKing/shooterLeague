@@ -17,6 +17,8 @@ include_directories(${CMAKE_SOURCE_DIR}/source/assets)
 
 add_executable(shooterLeague
         source/src/main.cpp
+        source/src/engine.cpp
+        source/src/draw.cpp
 )
 
 target_link_libraries(shooterLeague PRIVATE sfml-graphics)
