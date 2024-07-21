@@ -6,7 +6,8 @@
 
 Engine::Engine()
     : resolution(Vector2f(1280, 720)), // 16:9
-      window(VideoMode(resolution.x,resolution.y), "Shooter League", Style::Default)
+      window(VideoMode(resolution.x,resolution.y), "Shooter League", Style::Default),
+      car(Vector2f(400, 400),Vector2f(100, 60))
 {
     window.setFramerateLimit(FPS); // 60
 }

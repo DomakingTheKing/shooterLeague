@@ -7,6 +7,7 @@
 void Engine::draw() {
     window.clear(Color::Black);
 
+    window.draw(car.getShape());
 
     window.display();
 }

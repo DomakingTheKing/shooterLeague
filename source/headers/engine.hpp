@@ -6,6 +6,7 @@
 #define SHOOTERLEAGUE_ENGINE_HPP
 
 #include <SFML/Graphics.hpp>
+#include "car.hpp"
 
 using namespace sf;
 
@@ -24,6 +25,8 @@ private:
     RenderWindow window; // Effettiva finestra
 
     const int FPS = 60;
+
+    Car car;
 };
 
 

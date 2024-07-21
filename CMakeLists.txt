@@ -19,15 +19,16 @@ set(INCLUDE_DIR
         ${CMAKE_SOURCE_DIR}/source/assets
 )
 
-include_directories(${INCLUDE_DIR})
-
 set(SOURCE_FILES
         source/src/main.cpp
         source/src/engine.cpp
         source/src/draw.cpp
         source/src/input.cpp
         source/src/update.cpp
+        source/src/car.cpp
 )
+
+include_directories(${INCLUDE_DIR})
 
 add_executable(${EXEC_NAME} ${SOURCE_FILES})
 
