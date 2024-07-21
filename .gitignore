@@ -1,5 +1,7 @@
 # Ignora tutte le cartelle di CLion
 .idea/
+
+# Build folders
 cmake-build-debug/
 cmake-build-release/
-
+build/

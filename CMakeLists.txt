@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 project(shooterLeague)
 
+set(EXEC_NAME shooterLeague)
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 
@@ -12,14 +14,22 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(SFML)
 
-include_directories(${CMAKE_SOURCE_DIR}/source/headers)
-include_directories(${CMAKE_SOURCE_DIR}/source/assets)
+set(INCLUDE_DIR
+        ${CMAKE_SOURCE_DIR}/source/headers
+        ${CMAKE_SOURCE_DIR}/source/assets
+)
 
-add_executable(shooterLeague
+include_directories(${INCLUDE_DIR})
+
+set(SOURCE_FILES
         source/src/main.cpp
         source/src/engine.cpp
         source/src/draw.cpp
+        source/src/input.cpp
+        source/src/update.cpp
 )
+
+add_executable(${EXEC_NAME} ${SOURCE_FILES})
 
 target_link_libraries(shooterLeague PRIVATE sfml-graphics)
 target_compile_features(shooterLeague PRIVATE cxx_std_20)

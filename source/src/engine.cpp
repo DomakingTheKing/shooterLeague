@@ -5,10 +5,10 @@
 #include "engine.hpp"
 
 Engine::Engine()
-    : resolution(Vector2f(1280, 720)),
-      window(VideoMode(resolution.x,resolution.y), "tuamamma", Style::Default)
+    : resolution(Vector2f(1280, 720)), // 16:9
+      window(VideoMode(resolution.x,resolution.y), "Shooter League", Style::Default)
 {
-    window.setFramerateLimit(FPS);
+    window.setFramerateLimit(FPS); // 60
 }
 
 
